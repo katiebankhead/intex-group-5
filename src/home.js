@@ -1,13 +1,21 @@
 import React from 'react'
-import { Container, Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
+import Hero from './hero'
 
 export default function Home() {
     return (
-        <Container>
-            <br />
-            <center>
-                <h1>this is the main page</h1>
-            </center>
+        <Container fluid className="p-0">
+            <Row noGutters className='flex-grow-0 flex-shrink-0 shadow'>
+                <Col style={{ backgroundColor: '#fff' }}>
+                    <Hero />
+                </Col>
+            </Row>
+            <Row noGutters className='flex-grow-0 flex-shrink-0 '>
+                <Col>
+                <br />
+                    <h3>Maybe add some campaigns here?</h3>
+                </Col>
+            </Row>
         </Container>
     )
 }

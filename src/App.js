@@ -9,7 +9,7 @@ import Home from './home'
 
 function App() {
   return (
-    <Container fluid className='p-0 min-vh-100 d-flex flex-column'>
+    <Container fluid className='p-0 m-0 min-vh-100 d-flex flex-column'>
       <Row noGutters className='flex-grow-0 flex-shrink-0 shadow'>
         <Col className='px-3 py-2' style={{ backgroundColor: '#fff' }}>
           <TopContainer />
@@ -25,21 +25,3 @@ function App() {
 }
 
 export default App;
-
-
-// <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>

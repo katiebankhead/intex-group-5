@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Navbar, Nav, Form, FormControl, Button, Jumbotron } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
 import LottieControl from "./lottie"
 
 export default function Hero() {
@@ -13,20 +13,35 @@ export default function Hero() {
           block
           className='m-4 rounded-pill'
           style={{
-            backgroundColor: "#009758",
-            borderColor: "#009758",
+            backgroundColor: "#83AC25",
+            borderColor: "#83AC25",
+            width: "20rem",
+            height: "4rem",
+          }}
+          size='lg'>
+          ANALYSTS
+        </Button>
+        <Button
+          block
+          className='m-4 rounded-pill'
+          style={{ 
+            backgroundColor: "#83AC25",
+            borderColor: "#83AC25", 
+            width: "20rem" }}
+          size='lg'>
+          CAMPAIGN CREATORS
+        </Button>
+        <Button
+          block
+          className='m-4 rounded-pill'
+          style={{
+            backgroundColor: "#83AC25",
+            borderColor: "#83AC25",
             width: "20rem",
             height: "4rem",
           }}
           size='lg'>
           TRAINING
-        </Button>
-        <Button
-          block
-          className='m-4 rounded-pill'
-          style={{ backgroundColor: "#009758", borderColor: "#009758", width: "20rem" }}
-          size='lg'>
-          LAUNCH
         </Button>
       </div>
       <br />

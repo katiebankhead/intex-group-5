@@ -6,14 +6,8 @@ export default function Home() {
     return (
         <Container fluid className="p-0">
             <Row noGutters className='flex-grow-0 flex-shrink-0 shadow'>
-                <Col style={{ backgroundColor: '#fff' }}>
+                <Col style={{ backgroundColor: '#F3F3F3' }}>
                     <Hero />
-                </Col>
-            </Row>
-            <Row noGutters className='flex-grow-0 flex-shrink-0 '>
-                <Col>
-                <br />
-                    <h3>Maybe add some campaigns here?</h3>
                 </Col>
             </Row>
         </Container>

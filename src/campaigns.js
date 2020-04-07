@@ -24,7 +24,7 @@ function Campaigns(props) {
           <bs.Row className='justify-content-center'>
             {campaigns.map(n => {
               return (
-                <CampaignCard //!populate with model
+                <CampaignCard //TODO populate with model
                   key={n.id}
                   id={n.id}
                   name={n.name}

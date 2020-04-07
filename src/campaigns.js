@@ -9,13 +9,14 @@ function Campaigns(props) {
   //let campaigns = Object.values(context.products); //! Change to proper api
   //const category_match = useRouteMatch("/category/:cid"); //! Change to proper api
 
-  if (category_match) {
-    campaigns = campaigns.filter(p => {
-      return p.category.title === category_match.params.cid;
-    });
-  }
+  // if (category_match) {
+  //   campaigns = campaigns.filter(p => {
+  //     return p.category.title === category_match.params.cid;
+  //   });
+  // }
   return (
     <bs.Container>
+      <h1>Campaigns</h1>
       <bs.Col>
         search features here
       </bs.Col>

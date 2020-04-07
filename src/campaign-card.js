@@ -4,10 +4,29 @@ import { Link } from "react-router-dom";
 
 function CampaignCard(props) {
   return (
-    <bs.Card border='light' style={{ width: "30rem" }}>
-      <bs.Card.Img variant='top' src={"/media/products/" + props.filename + "-1.png"} />
+    <bs.Card>
+      {/* <bs.Card.Img variant='top' src={"/media/products/" + props.filename + "-1.png"} /> */}
       <bs.Card.Body>
-        <bs.Card.Title>{props.name}</bs.Card.Title>
+        <bs.Row style={{ display: "flex", flexDirection: "row" }}>
+          <bs.Card.Img src={require("./testimage.png")} style={{ width: "15rem" }} />
+          <bs.Col>
+            <bs.Card.Title>Campaign Name</bs.Card.Title>
+            <bs.Card.Subtitle>Campaign owner</bs.Card.Subtitle>
+            <br />
+            <bs.Card.Text>the details go here lorum ipsum etc</bs.Card.Text>
+            <Link
+              className='btn btn-light'
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                alignItems: "flexEnd",
+              }}>
+              Details
+            </Link>
+          </bs.Col>
+        </bs.Row>
+        {/* <bs.Card.Title>{props.name}</bs.Card.Title>
         <bs.Card.Text>${props.price}</bs.Card.Text>
         <Link
           to={"/product/" + props.id} //! Change to proper api 
@@ -15,7 +34,7 @@ function CampaignCard(props) {
           className='btn btn-light'
           style={{ position: "absolute", right: "10px", top: "10px" }}>
           Details
-        </Link>
+        </Link> */}
       </bs.Card.Body>
     </bs.Card>
   );

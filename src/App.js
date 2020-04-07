@@ -6,6 +6,7 @@ import './App.css';
 import TopContainer from './top-container'
 import Home from './home'
 import Calculator from './calculator'
+import Campaigns from './campaigns';
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
               </Route>
               <Route path="/">
                 <Home />
+              </Route>
+              <Route path='/campaigns'>
+                <Campaigns />
               </Route>
             </Switch>
           </Col>

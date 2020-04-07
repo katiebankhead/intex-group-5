@@ -17,16 +17,60 @@ function Campaigns(props) {
   // }
   return (
     <bs.Container>
-      <bs.Row style={{ padding: "2rem" }}>
-        <h1>Campaigns</h1>
+      <bs.Row className='justify-content-center' style={{ display: "flex", padding: "2rem" }}>
+        <h1 className='d-flex align-self-center'>campaigns</h1>
       </bs.Row>
       <bs.Row
         style={{ display: "flex", flexDirection: "row" }}
         noGutters
         className='flex-grow-0 flex-shrink-0'>
         <bs.Col md={3} className='d-flex'>
-          <bs.Card style={{ padding: "5rem" }}>
-            <bs.Card.Text>search features here</bs.Card.Text>
+          <bs.Card style={{ padding: "2rem" }}>
+            <bs.Form>
+              <bs.Form.Group controlId='exampleForm.ControlInput1'>
+                <bs.Form.Label>Email address</bs.Form.Label>
+                <bs.Form.Control type='email' placeholder='name@example.com' />
+              </bs.Form.Group>
+              <bs.Form.Group controlId='exampleForm.ControlSelect1'>
+                <bs.Form.Label>Example select</bs.Form.Label>
+                <bs.Form.Control as='select'>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </bs.Form.Control>
+              </bs.Form.Group>
+              <bs.Form.Group controlId='exampleForm.ControlSelect2'>
+                <bs.Form.Label>Example multiple select</bs.Form.Label>
+                <bs.Form.Control as='select' multiple>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </bs.Form.Control>
+              </bs.Form.Group>
+              <bs.Form.Group controlId='exampleForm.ControlTextarea1'>
+                <bs.Form.Label>Example textarea</bs.Form.Label>
+                <bs.Form.Control as='textarea' rows='3' />
+              </bs.Form.Group>
+              <bs.Button
+                block
+                className='m-4 rounded-pill font-weight-bold'
+                type='submit'
+                style={{
+                  backgroundColor: "#FFFFFF	",
+                  borderColor: "#83AC25",
+                  borderWidth: "3pt",
+                  width: "10rem",
+                  height: "3rem",
+                  color: "#83AC25",
+                }}
+                size='md'>
+                SUBMIT
+              </bs.Button>
+            </bs.Form>
           </bs.Card>
         </bs.Col>
         <bs.Col className='d-flex'>

@@ -19,6 +19,7 @@ export default Calculator
 
 const CalculatorController = props => {
     const total = 50.00 // context.getCartTotal()
+    const [score, setScore] = React.useState('This is your score')
 
     // Days Active
     // T/F has beneficiary
@@ -30,12 +31,12 @@ const CalculatorController = props => {
     return (
         <Formik
             initialValues={{
-                name: 'Conrad Fox',
-                address1: '1234',
-                address2: '5678',
-                city: 'Provo',
-                state: 'UT',
-                zipcode: '84602',
+                daysActive: '14',
+                beneficiary: 'True',
+                charity: 'True',
+                hearts: '35',
+                visibleSearch: 'False',
+                goal: '84602',
             }}
             validateOnChange={false}
             validateOnBlur={false}
@@ -46,6 +47,7 @@ const CalculatorController = props => {
             }}
             onSubmit={async (values, actions) => {
                 console.log('submit', values)
+                setScore(null)
                 await new Promise(resolve => {
                     setTimeout(() => {  // wait 2 seconds, then set the form as "not submitting"
                         resolve()
@@ -54,7 +56,7 @@ const CalculatorController = props => {
                 console.log('after the 2 seconds')
             }}
         >{form => (
-            <PaymentForm form={form} total={total} />
+            <PaymentForm form={form} total={total} score={score} />
         )}</Formik>
     )
 }
@@ -89,19 +91,15 @@ const PaymentForm = props => (
                 <bs.Col md='2'></bs.Col>
                 <bs.Col md='8'>
                     <bs.Card>
-                        {/* <bs.Card.Header>
-                            <bs.Card.Title>Card Title</bs.Card.Title>
-                        </bs.Card.Header> */}
                         <bs.Card.Body>
                             <Input title="Days Active:" name="daysActive" type="text" />
                             <Input title="Campaign has declared beneficiary (true/false):" name="beneficiary" type="text" />
                             <Input title="Campaign creator is a charity (true/false):" name="charity" type="text" />
                             <Input title="Number of hearts:" name="hearts" type="text" />
                             <Input title="Campaign is visible in search results (true/false):" name="visibleSearch" type="text" />
-                            <Input title="Goal $ to raise:" name="beneficiary" type="text" />
+                            <Input title="Goal $ to raise:" name="goal" type="text" />
                         </bs.Card.Body>
                     </bs.Card>
-                    
                 </bs.Col>
                 <bs.Col md='2'></bs.Col>
             </bs.Row>
@@ -128,6 +126,9 @@ const PaymentForm = props => (
                     </bs.Button>
                 </bs.Col>
                 <bs.Col md='3'></bs.Col>
+            </bs.Row>
+            <bs.Row>
+                <h1>{props.score}</h1>
             </bs.Row>
 
             {/* form inputs */}

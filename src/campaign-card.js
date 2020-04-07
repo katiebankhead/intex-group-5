@@ -8,12 +8,16 @@ function CampaignCard(props) {
       {/* <bs.Card.Img variant='top' src={"/media/products/" + props.filename + "-1.png"} /> */}
       <bs.Card.Body>
         <bs.Row style={{ display: "flex", flexDirection: "row" }}>
-          <bs.Card.Img src={require("./testimage.png")} style={{ width: "15rem" }} />
+          <bs.Card.Img
+            src={require("./testimage.png")}
+            style={{ width: "15rem", padding: "2rem" }}
+          />
           <bs.Col>
             <bs.Card.Title>Campaign Name</bs.Card.Title>
             <bs.Card.Subtitle>Campaign owner</bs.Card.Subtitle>
-            <br />
-            <bs.Card.Text>the details go here lorum ipsum etc</bs.Card.Text>
+            <bs.Card.Text style={{ padding: "1rem" }}>
+              the details go here lorum ipsum etc
+            </bs.Card.Text>
             <Link
               className='btn btn-light'
               style={{

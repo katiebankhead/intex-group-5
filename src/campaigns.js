@@ -16,14 +16,22 @@ function Campaigns(props) {
   // }
   return (
     <bs.Container>
-      <h1>Campaigns</h1>
-      <bs.Col>
-        search features here
-      </bs.Col>
-      <bs.Col>
-        <bs.Container>
-          <CampaignCard />
-          {/* <bs.Row className='justify-content-center'>
+      <bs.Row style={{ padding: "2rem" }}>
+        <h1>Campaigns</h1>
+      </bs.Row>
+      <bs.Row
+        style={{ display: "flex", flexDirection: "row" }}
+        noGutters
+        className='flex-grow-0 flex-shrink-0'>
+        <bs.Col md={3} className='d-flex'>
+          <bs.Card style={{ padding: "5rem" }}>
+            <bs.Card.Text>search features here</bs.Card.Text>
+          </bs.Card>
+        </bs.Col>
+        <bs.Col className='d-flex'>
+          <bs.Container>
+            <CampaignCard />
+            {/* <bs.Row className='justify-content-center'>
             {campaigns.map(n => {
               return (
                 <CampaignCard //TODO populate with model
@@ -38,8 +46,9 @@ function Campaigns(props) {
               );
             })}
           </bs.Row> */}
-        </bs.Container>
-      </bs.Col>
+          </bs.Container>
+        </bs.Col>
+      </bs.Row>
     </bs.Container>
   );
 }

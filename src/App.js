@@ -5,6 +5,7 @@ import "./App.css";
 //import all the components
 import TopContainer from "./top-container";
 import Home from "./home";
+import FooterContainer from "./footer-container";
 import Calculator from "./calculator";
 import Campaigns from "./campaigns";
 
@@ -30,6 +31,11 @@ function App() {
                 <Home />
               </Route>
             </Switch>
+          </Col>
+        </Row>
+        <Row noGutters className='flex-grow-0 flex-shrink-0'>
+          <Col className='px-3 py-2 bg-fourth'>
+            <FooterContainer />
           </Col>
         </Row>
       </Container>

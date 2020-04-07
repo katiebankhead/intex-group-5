@@ -18,16 +18,22 @@ function CampaignCard(props) {
             <bs.Card.Text style={{ padding: "1rem" }}>
               the details go here lorum ipsum etc
             </bs.Card.Text>
-            <Link
-              className='btn btn-light'
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                alignItems: "flexEnd",
-              }}>
-              Details
-            </Link>
+            <center>
+              <Link
+                className='btn btn-light absolute-center m-4 rounded-pill font-weight-bold'
+                style={{
+                  backgroundColor: "#83AC25",
+                  borderColor: "#FFFFFF",
+                  borderWidth: "3pt",
+                  width: "10rem",
+                  height: "3rem",
+                  fontSize: "14pt",
+                  color: "#FFFFFF",
+                }}
+                size='lg'>
+                DETAILS
+              </Link>
+            </center>
           </bs.Col>
         </bs.Row>
         {/* <bs.Card.Title>{props.name}</bs.Card.Title>

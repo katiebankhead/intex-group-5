@@ -9,10 +9,11 @@ export default function Hero() {
       <div className='d-flex'>
         <Button
           block
-          className='m-4 rounded-pill'
+          className='m-4 rounded-pill font-weight-bold'
           style={{
             backgroundColor: "#83AC25",
-            borderColor: "#83AC25",
+            borderColor: "#FFFFFF",
+            borderWidth: "3pt",
             width: "20rem",
             height: "4rem",
           }}
@@ -21,10 +22,11 @@ export default function Hero() {
         </Button>
         <Button
           block
-          className='m-4 rounded-pill'
+          className='m-4 rounded-pill font-weight-bold'
           style={{
             backgroundColor: "#FFFFFF	",
             borderColor: "#83AC25",
+            borderWidth: "3pt",
             width: "20rem",
             height: "4rem",
             color: "#83AC25",
@@ -34,10 +36,11 @@ export default function Hero() {
         </Button>
         <Button
           block
-          className='m-4 rounded-pill'
+          className='m-4 rounded-pill font-weight-bold'
           style={{
             backgroundColor: "#83AC25",
-            borderColor: "#83AC25",
+            borderColor: "#FFFFFF",
+            borderWidth: "3pt",
             width: "20rem",
           }}
           size='lg'>

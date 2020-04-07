@@ -17,8 +17,10 @@ function Campaigns(props) {
   // }
   return (
     <bs.Container>
-      <bs.Row className='justify-content-center' style={{ display: "flex", padding: "2rem" }}>
-        <h1 className='d-flex align-self-center'>campaigns</h1>
+      <bs.Row
+        className='justify-content-center lato font-weight-bolder'
+        style={{ display: "flex", padding: "2rem", color: "#83AC25", fontSize: "50pt" }}>
+        campaigns
       </bs.Row>
       <bs.Row
         style={{ display: "flex", flexDirection: "row" }}

@@ -1,10 +1,8 @@
 import React from "react";
 import { Container, Button } from "react-bootstrap";
-import LottieControl from "./lottie"
+import LottieControl from "./lottie";
 
 export default function Hero() {
-
-
   return (
     <Container className='py-10  d-flex flex-column align-items-center'>
       <LottieControl />
@@ -24,12 +22,15 @@ export default function Hero() {
         <Button
           block
           className='m-4 rounded-pill'
-          style={{ 
-            backgroundColor: "#83AC25",
-            borderColor: "#83AC25", 
-            width: "20rem" }}
+          style={{
+            backgroundColor: "#FFFFFF	",
+            borderColor: "#83AC25",
+            width: "20rem",
+            height: "4rem",
+            color: "#83AC25",
+          }}
           size='lg'>
-          CAMPAIGN CREATORS
+          TRAINING
         </Button>
         <Button
           block
@@ -38,10 +39,9 @@ export default function Hero() {
             backgroundColor: "#83AC25",
             borderColor: "#83AC25",
             width: "20rem",
-            height: "4rem",
           }}
           size='lg'>
-          TRAINING
+          CAMPAIGN CREATORS
         </Button>
       </div>
       <br />

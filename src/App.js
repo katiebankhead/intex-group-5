@@ -23,11 +23,11 @@ function App() {
               <Route path='/calculator'>
                 <Calculator />
               </Route>
-              <Route path="/">
-                <Home />
-              </Route>
               <Route path='/campaigns'>
                 <Campaigns />
+              </Route>
+              <Route path="/">
+                <Home />
               </Route>
             </Switch>
           </Col>

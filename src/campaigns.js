@@ -1,6 +1,6 @@
 import React from "react";
 import * as bs from "react-bootstrap";
-import ProductCard from "./campaign-card";
+import CampaignCard from "./campaign-card";
 import { useRouteMatch } from "react-router-dom";
 import AppContext from "./context";
 
@@ -16,21 +16,28 @@ function Campaigns(props) {
   }
   return (
     <bs.Container>
-      <bs.Row className='justify-content-center'>
-        {campaigns.map(n => {
-          return (
-            <CampaignCard
-              key={n.id}
-              id={n.id}
-              name={n.name}
-              category={n.category}
-              filename={n.filename}
-              description={n.description}
-              price={n.price}
-            />
-          );
-        })}
-      </bs.Row>
+      <bs.Col>
+        search features here
+    </bs.Col>
+      <bs.Col>
+        <bs.Container>
+          <bs.Row className='justify-content-center'>
+            {campaigns.map(n => {
+              return (
+                <CampaignCard //!populate with model
+                  key={n.id}
+                  id={n.id}
+                  name={n.name}
+                  category={n.category}
+                  filename={n.filename}
+                  description={n.description}
+                  price={n.price}
+                />
+              );
+            })}
+          </bs.Row>
+        </bs.Container>
+      </bs.Col>
     </bs.Container>
   );
 }

@@ -1,27 +1,25 @@
 import React from "react";
 import * as bs from "react-bootstrap";
-//import PRODUCTS from "./products";
-import ProductCard from "./product-card";
+import ProductCard from "./campaign-card";
 import { useRouteMatch } from "react-router-dom";
 import AppContext from "./context";
 
 function Campaigns(props) {
-  //let products = Object.values(PRODUCTS);
   const context = React.useContext(AppContext);
-  let products = Object.values(context.products); //! Change to proper api
-  const category_match = useRouteMatch("/category/:cid");
+  let campaigns = Object.values(context.products); //! Change to proper api
+  const category_match = useRouteMatch("/category/:cid"); //! Change to proper api
 
   if (category_match) {
-    products = products.filter(p => {
+    campaigns = campaigns.filter(p => {
       return p.category.title === category_match.params.cid;
     });
   }
   return (
     <bs.Container>
       <bs.Row className='justify-content-center'>
-        {products.map(n => {
+        {campaigns.map(n => {
           return (
-            <ProductCard
+            <CampaignCard
               key={n.id}
               id={n.id}
               name={n.name}

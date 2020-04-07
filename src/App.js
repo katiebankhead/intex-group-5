@@ -6,6 +6,7 @@ import './App.css';
 import TopContainer from './top-container'
 import Home from './home'
 import Calculator from './calculator'
+import CampaignDetail from './campaign-detail'
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
         <Row noGutters className='flex-grow-1'>
           <Col md='12'>
             <Switch>
+              <Route path='/campaigns/:campaignID'>
+                <CampaignDetail />
+              </Route>
               <Route path='/calculator'>
                 <Calculator />
               </Route>

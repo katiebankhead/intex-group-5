@@ -9,7 +9,7 @@ export default function TopContainer() {
             </Navbar.Brand>
             <Nav className="justify-content-center">
                 <Nav.Link href="#home">CAMPAIGNS</Nav.Link>
-                <Nav.Link href="#features">PREDICTION CALCULATOR</Nav.Link>
+                <Nav.Link href="/calculator">PREDICTION CALCULATOR</Nav.Link>
                 <Nav.Link href="#pricing">TRAINING</Nav.Link>
             </Nav>
         </Navbar>

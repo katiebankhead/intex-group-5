@@ -5,9 +5,9 @@ import { useRouteMatch } from "react-router-dom";
 import AppContext from "./context";
 
 function Campaigns(props) {
-  const context = React.useContext(AppContext);
-  let campaigns = Object.values(context.products); //! Change to proper api
-  const category_match = useRouteMatch("/category/:cid"); //! Change to proper api
+  //const context = React.useContext(AppContext);
+  //let campaigns = Object.values(context.products); //! Change to proper api
+  //const category_match = useRouteMatch("/category/:cid"); //! Change to proper api
 
   if (category_match) {
     campaigns = campaigns.filter(p => {
@@ -18,10 +18,11 @@ function Campaigns(props) {
     <bs.Container>
       <bs.Col>
         search features here
-    </bs.Col>
+      </bs.Col>
       <bs.Col>
         <bs.Container>
-          <bs.Row className='justify-content-center'>
+          <CampaignCard />
+          {/* <bs.Row className='justify-content-center'>
             {campaigns.map(n => {
               return (
                 <CampaignCard //TODO populate with model
@@ -35,7 +36,7 @@ function Campaigns(props) {
                 />
               );
             })}
-          </bs.Row>
+          </bs.Row> */}
         </bs.Container>
       </bs.Col>
     </bs.Container>

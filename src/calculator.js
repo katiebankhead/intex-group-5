@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-import React from "react";
-import * as bs from "react-bootstrap";
-import { Formik, Form, Field } from "formik";
-=======
 import React from 'react'
 import * as bs from 'react-bootstrap'
 import { Formik, Form, Field } from 'formik'
 import axios from 'axios'
->>>>>>> bd1ff913e843e861569bf466b1464c76bc94e707
 // import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 // import { loadStripe } from '@stripe/stripe-js';
 
@@ -17,54 +11,6 @@ function Calculator(props) {
   // we'll add Stripe's Elements component here later
   return <CalculatorController />;
 }
-<<<<<<< HEAD
-export default Calculator;
-
-//
-const CalculatorController = (props) => {
-  const total = 50.0; // context.getCartTotal()
-  const [score, setScore] = React.useState("This is your score");
-
-  // Days Active
-  // T/F has beneficiary
-  // T/F creator is a charity
-  // number of hearts
-  // T/F visible in search
-  // Goal $ to raise
-
-  return (
-    <Formik
-      initialValues={{
-        daysActive: "14",
-        beneficiary: "True",
-        charity: "True",
-        hearts: "35",
-        visibleSearch: "False",
-        goal: "84602",
-      }}
-      validateOnChange={false}
-      validateOnBlur={false}
-      validate={(values) => {
-        const errors = {};
-        console.log("validating", values);
-        return errors;
-      }}
-      onSubmit={async (values, actions) => {
-        console.log("submit", values);
-        setScore(null);
-        await new Promise((resolve) => {
-          setTimeout(() => {
-            // wait 2 seconds, then set the form as "not submitting"
-            resolve();
-          }, 2000);
-        });
-        console.log("after the 2 seconds");
-      }}>
-      {(form) => <PaymentForm form={form} total={total} score={score} />}
-    </Formik>
-  );
-};
-=======
 export default Calculator
 
 
@@ -187,7 +133,6 @@ const CalculatorController = props => {
     )
 }
 
->>>>>>> bd1ff913e843e861569bf466b1464c76bc94e707
 
 /**
  * The form layout/html

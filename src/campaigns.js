@@ -15,6 +15,7 @@ function Campaigns(props) {
   //     return p.category.title === category_match.params.cid;
   //   });
   // }
+
   return (
     <bs.Container>
       <bs.Row
@@ -32,33 +33,23 @@ function Campaigns(props) {
               <div className='font-weight-bold'>SEARCH:</div>
               <br />
               <bs.Form.Group controlId='exampleForm.ControlInput1'>
-                <bs.Form.Label>Email address</bs.Form.Label>
-                <bs.Form.Control type='email' placeholder='name@example.com' />
+                <bs.Form.Label>Campaign Name</bs.Form.Label>
+                <bs.Form.Control type='text' placeholder='Type here' />
               </bs.Form.Group>
               <bs.Form.Group controlId='exampleForm.ControlSelect1'>
-                <bs.Form.Label>Example select</bs.Form.Label>
+                <bs.Form.Label>Fraud Level</bs.Form.Label>
                 <bs.Form.Control as='select'>
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
                   <option>4</option>
-                  <option>5</option>
                 </bs.Form.Control>
               </bs.Form.Group>
-              <bs.Form.Group controlId='exampleForm.ControlSelect2'>
-                <bs.Form.Label>Example multiple select</bs.Form.Label>
-                <bs.Form.Control as='select' multiple>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </bs.Form.Control>
+              <bs.Form.Group controlId='exampleForm.ControlInput1'>
+                <bs.Form.Label>Key Words</bs.Form.Label>
+                <bs.Form.Control type='text' placeholder='Type here' />
               </bs.Form.Group>
-              <bs.Form.Group controlId='exampleForm.ControlTextarea1'>
-                <bs.Form.Label>Example textarea</bs.Form.Label>
-                <bs.Form.Control as='textarea' rows='3' />
-              </bs.Form.Group>
+              <br />
               <bs.Button
                 block
                 className='m-4 rounded-pill font-weight-bold'

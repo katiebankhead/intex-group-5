@@ -21,6 +21,9 @@ function App() {
         <Row noGutters className='flex-grow-1'>
           <Col md='12' style={{ backgroundColor: "#F3F3F3" }}>
             <Switch>
+              <Route path='/campaigns/:campaignID'>
+                <CampaignDetail />
+              </Route>
               <Route path='/calculator'>
                 <Calculator />
               </Route>

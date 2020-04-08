@@ -9,7 +9,7 @@ function Training(props) {
   return (
     <bs.Container>
       <bs.Row
-        className='justify-content-center lato font-weight-bolder'
+        className='justify-content-center lato font-weight-bolder dropshadow-white'
         style={{ display: "flex", padding: "2rem", color: "#83AC25", fontSize: "50pt" }}>
         training
       </bs.Row>

@@ -18,7 +18,7 @@ function Campaigns(props) {
   return (
     <bs.Container>
       <bs.Row
-        className='justify-content-center lato font-weight-bolder'
+        className='justify-content-center lato font-weight-bolder dropshadow-white'
         style={{ display: "flex", padding: "2rem", color: "#83AC25", fontSize: "50pt" }}>
         campaigns
       </bs.Row>
@@ -66,10 +66,11 @@ function Campaigns(props) {
                 style={{
                   backgroundColor: "#FFFFFF	",
                   borderColor: "#83AC25",
-                  borderWidth: "3pt",
+                  borderWidth: "4pt",
                   width: "10rem",
                   height: "3rem",
                   color: "#83AC25",
+                  boxShadow: "3px 3px 0px #999999",
                 }}
                 size='md'>
                 SUBMIT
@@ -106,10 +107,11 @@ function Campaigns(props) {
                 style={{
                   backgroundColor: "#FFFFFF	",
                   borderColor: "#83AC25",
-                  borderWidth: "3pt",
+                  borderWidth: "4pt",
                   width: "10rem",
                   height: "3rem",
                   color: "#83AC25",
+                  boxShadow: "3px 3px 0px #999999",
                 }}
                 size='md'>
                 MORE

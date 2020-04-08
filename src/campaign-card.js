@@ -1,6 +1,8 @@
 import React from "react";
 import * as bs from "react-bootstrap";
 import { Link } from "react-router-dom";
+import LottieHeart from "./lottieHeart";
+import LottieShare from "./lottieShare";
 
 function CampaignCard(props) {
   return (
@@ -10,31 +12,58 @@ function CampaignCard(props) {
         <bs.Row style={{ display: "flex", flexDirection: "row" }}>
           <bs.Card.Img
             src={require("./testimage.png")}
-            style={{ width: "15rem", padding: "2rem" }}
+            style={{ width: "15rem", height: "15rem", padding: "2rem" }}
           />
           <bs.Col>
-            <bs.Card.Title>Campaign Name</bs.Card.Title>
-            <bs.Card.Subtitle>Campaign owner</bs.Card.Subtitle>
-            <bs.Card.Text style={{ padding: "1rem" }}>
-              the details go here lorum ipsum etc
-            </bs.Card.Text>
-            <center>
+            <bs.Row>
+              <bs.Col md={7}>
+                <bs.Card.Title>Campaign Name</bs.Card.Title>
+                <bs />
+                <bs.Card.Subtitle>Campaign owner</bs.Card.Subtitle>
+                <bs.Card.Text style={{ padding: "1rem" }}>
+                  the details go here lorum ipsum etc
+                </bs.Card.Text>
+              </bs.Col>
+              <bs.Col className='justify-content-end'>
+                <bs.Row>
+                  <bs.Col>
+                    <LottieHeart />
+                  </bs.Col>
+                  <bs.Col style={{ position: "absolute", left: "130px", fontSize: "18px" }}>
+                    {" "}
+                    <br />
+                    500
+                  </bs.Col>
+                </bs.Row>
+                <bs.Row className='align-content-center'>
+                  <bs.Col style={{ position: "absolute", left: "130px", fontSize: "18px" }}>
+                    <br />
+                    26
+                  </bs.Col>
+                  <bs.Col>
+                    <LottieShare />
+                  </bs.Col>
+                </bs.Row>
+              </bs.Col>
+            </bs.Row>
+            <bs.Row className='justify-content-end'>
               <Link
                 to={"/campaign-details/" + props.id}
                 className='btn btn-light absolute-center m-4 rounded-pill font-weight-bold'
                 style={{
                   backgroundColor: "#83AC25",
                   borderColor: "#FFFFFF",
-                  borderWidth: "3pt",
+                  borderWidth: "4pt",
                   width: "10rem",
                   height: "3rem",
-                  fontSize: "14pt",
+                  fontSize: "13pt",
                   color: "#FFFFFF",
+                  boxShadow: "3px 3px 0px #999999",
                 }}
                 size='lg'>
                 DETAILS
               </Link>
-            </center>
+            </bs.Row>
           </bs.Col>
         </bs.Row>
         {/* <bs.Card.Title>{props.name}</bs.Card.Title>

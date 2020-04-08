@@ -1,6 +1,7 @@
 import React from 'react'
 import * as bs from 'react-bootstrap'
 import { Formik, Form, Field } from 'formik'
+import axios from 'axios'
 // import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 // import { loadStripe } from '@stripe/stripe-js';
 
@@ -20,6 +21,8 @@ export default Calculator
 const CalculatorController = props => {
     const total = 50.00 // context.getCartTotal()
     const [score, setScore] = React.useState('This is your score')
+  
+    
 
     // Days Active
     // T/F has beneficiary
@@ -47,13 +50,86 @@ const CalculatorController = props => {
             }}
             onSubmit={async (values, actions) => {
                 console.log('submit', values)
-                setScore(null)
-                await new Promise(resolve => {
-                    setTimeout(() => {  // wait 2 seconds, then set the form as "not submitting"
-                        resolve()
-                    }, 2000)
+                const api_headers = {
+                    "Authorization": "Bearer zY5Oie1v2gd8x7JUU+6t+eD06SSGIu3cSGLqJykxAKnI3fmvx3oTVwT9h8T9dGYZ5mqwfu/LswXXYCt3E1QKUQ==",
+                    "Content-Type": "application/json"
+                }
+                let data = {
+                    // "goal": values.goal,
+                    // "days_active": values.daysActive,
+                    // "has_beneficiary": values.beneficiary,
+                    // "visible_in_search": values.visibleSearch,
+                    // "campaign_hearts": values.hearts,
+                    // "is_charity": values.charity,
+                    
+                    "Inputs": {
+                        "input1": {
+                        "ColumnNames": [
+                            "goal",
+                            "days_active",
+                            "has_beneficiary",
+                            "visible_in_search",
+                            "campaign_hearts",
+                            "is_charity"
+                        ],
+                        "Values": [
+                            [
+                            values.goal,
+                            values.daysActive,
+                            values.beneficiary,
+                            values.visibleSearch,
+                            values.hearts,
+                            values.charity
+                            ]
+                        ]
+                        }
+                    },
+                    "GlobalParameters": {}
+                      
+                }
+                // setScore(null)
+                // await new Promise(resolve => {
+                //     setTimeout(() => {  // wait 2 seconds, then set the form as "not submitting"
+                //         resolve()
+                //     }, 2000)
+                // })
+                // console.log('after the 2 seconds')
+                console.log(data)
+                console.log(api_headers)
+                await axios.post('http://localhost:8000/api/prediction/', {
+                    "goal": values.goal,
+                    "days_active": values.daysActive,
+                    "has_beneficiary": values.beneficiary,
+                    "visible_in_search": values.visibleSearch,
+                    "campaign_hearts": values.hearts,
+                    "is_charity": values.charity,
+ 
                 })
-                console.log('after the 2 seconds')
+                .then((response) => {
+                    console.log(response);
+                    console.log(response.data)
+                    
+                    const score = parseFloat(response.data)
+                    if(score === 0){
+                        setScore("Your campaign will raise $0")
+                    }
+                    else if(score <= 1){
+                        setScore("Your campaign will raise $1-$130")
+                    }
+                    else if(score <= 2){
+                        setScore("Your campaign will raise $131-$635")
+                    }
+                    else if(score <= 3){
+                        setScore("Your campaign will raise $636-$3332")
+                    }
+                    else if(score <= 4){
+                        setScore("Your campaign will raise over $3332")
+                    }
+                }, (error) => {
+                    console.log(error);
+                });
+
+                
             }}
         >{form => (
             <PaymentForm form={form} total={total} score={score} />

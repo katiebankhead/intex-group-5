@@ -17,7 +17,9 @@ function CampaignCard(props) {
           <bs.Col>
             <bs.Row>
               <bs.Col md={7} style={{ padding: "1rem" }}>
-                <bs.Card.Title style={{ fontSize: "20pt" }}>Campaign Name</bs.Card.Title>
+                <bs.Card.Title className='font-weight-bold' style={{ fontSize: "20pt" }}>
+                  Campaign Name
+                </bs.Card.Title>
                 <div style={{ fontSize: "14pt" }}>
                   <p>Days: test</p>
                   <p>Total: $test</p>

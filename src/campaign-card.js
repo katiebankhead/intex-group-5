@@ -16,11 +16,13 @@ function CampaignCard(props) {
           />
           <bs.Col>
             <bs.Row>
-              <bs.Col md={7}>
-                <bs.Card.Title>Campaign Name</bs.Card.Title>
-                <p>Days Running:</p>
-                <p>Total Donations: test</p>
-                <p>Goal:</p>
+              <bs.Col md={7} style={{ padding: "1rem" }}>
+                <bs.Card.Title style={{ fontSize: "20pt" }}>Campaign Name</bs.Card.Title>
+                <div style={{ fontSize: "14pt" }}>
+                  <p>Days: test</p>
+                  <p>Total: $test</p>
+                  <p>Goal: $test</p>
+                </div>
               </bs.Col>
               <bs.Col className='justify-content-end'>
                 <bs.Row>
@@ -44,11 +46,11 @@ function CampaignCard(props) {
                 </bs.Row>
               </bs.Col>
             </bs.Row>
-            <bs.Row className='justify-content-end'>
-              <bs.Col style={{ fontSize: "30px" }}>
+            <bs.Row>
+              <bs.Col style={{ fontSize: "25px", position: "absolute", bottom: "-2px" }}>
                 <p>Fraud Level:</p>
               </bs.Col>
-              <bs.Col>
+              <bs.Col className='justify-content-end'>
                 <Link
                   to={"/campaign-details/" + props.id}
                   className='btn btn-light absolute-center m-4 rounded-pill font-weight-bold'
@@ -61,6 +63,9 @@ function CampaignCard(props) {
                     fontSize: "13pt",
                     color: "#FFFFFF",
                     boxShadow: "3px 3px 0px #999999",
+                    position: "absolute",
+                    right: "10px",
+                    bottom: "-50px",
                   }}
                   size='lg'>
                   DETAILS

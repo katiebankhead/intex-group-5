@@ -1,12 +1,13 @@
-import React from 'react'
-import Lottie from 'react-lottie'
-import * as animationData from './logo_animated.json'
-import { Container } from 'react-bootstrap'
+import React from "react";
+import Lottie from "react-lottie";
+import * as animationData from "./LottieJSONs/logo_animated.json";
+import * as heartData from "./LottieJSONs/heart.json";
+import { Container } from "react-bootstrap";
 
 export default class LottieControl extends React.Component {
   constructor(props) {
-    super(props)
-    this.state = { isStopped: false, isPaused: false }
+    super(props);
+    this.state = { isStopped: false, isPaused: false };
   }
   render() {
     const defaultOptions = {
@@ -14,12 +15,13 @@ export default class LottieControl extends React.Component {
       autoplay: true,
       animationData: animationData.default,
       rendererSettings: {
-        preserveAspectRatio: 'xMidYmid slice'
-      }
-    }
-    return (<Container>
-      <Lottie options={defaultOptions}
-        height={"30rem"} />
-    </Container>)
+        preserveAspectRatio: "xMidYmid slice",
+      },
+    };
+    return (
+      <Container>
+        <Lottie options={defaultOptions} height={"30rem"} />
+      </Container>
+    );
   }
 }

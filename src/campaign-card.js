@@ -18,11 +18,9 @@ function CampaignCard(props) {
             <bs.Row>
               <bs.Col md={7}>
                 <bs.Card.Title>Campaign Name</bs.Card.Title>
-                <bs />
-                <bs.Card.Subtitle>Campaign owner</bs.Card.Subtitle>
-                <bs.Card.Text style={{ padding: "1rem" }}>
-                  the details go here lorum ipsum etc
-                </bs.Card.Text>
+                <p>Days Running:</p>
+                <p>Total Donations: test</p>
+                <p>Goal:</p>
               </bs.Col>
               <bs.Col className='justify-content-end'>
                 <bs.Row>
@@ -47,22 +45,27 @@ function CampaignCard(props) {
               </bs.Col>
             </bs.Row>
             <bs.Row className='justify-content-end'>
-              <Link
-                to={"/campaign-details/" + props.id}
-                className='btn btn-light absolute-center m-4 rounded-pill font-weight-bold'
-                style={{
-                  backgroundColor: "#83AC25",
-                  borderColor: "#FFFFFF",
-                  borderWidth: "4pt",
-                  width: "10rem",
-                  height: "3rem",
-                  fontSize: "13pt",
-                  color: "#FFFFFF",
-                  boxShadow: "3px 3px 0px #999999",
-                }}
-                size='lg'>
-                DETAILS
-              </Link>
+              <bs.Col style={{ fontSize: "30px" }}>
+                <p>Fraud Level:</p>
+              </bs.Col>
+              <bs.Col>
+                <Link
+                  to={"/campaign-details/" + props.id}
+                  className='btn btn-light absolute-center m-4 rounded-pill font-weight-bold'
+                  style={{
+                    backgroundColor: "#83AC25",
+                    borderColor: "#FFFFFF",
+                    borderWidth: "4pt",
+                    width: "10rem",
+                    height: "3rem",
+                    fontSize: "13pt",
+                    color: "#FFFFFF",
+                    boxShadow: "3px 3px 0px #999999",
+                  }}
+                  size='lg'>
+                  DETAILS
+                </Link>
+              </bs.Col>
             </bs.Row>
           </bs.Col>
         </bs.Row>

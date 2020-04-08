@@ -37,10 +37,14 @@ export default function CampaignDetail() {
 
       {/* Uncomment when axios is connected */}
 
+<<<<<<< HEAD
       {/* <Row className='pb-2'>
+=======
+            <Row className='pb-2'>
+>>>>>>> bd1ff913e843e861569bf466b1464c76bc94e707
                 <Col md="3"></Col>
                 <Col md="6">
-                    <center><h1>{campaign.campaign_id}</h1></center>
+                    <center><h1>{campaign.title}</h1></center>
                 </Col>
                 <Col md="3"></Col>
             </Row>
@@ -58,7 +62,7 @@ export default function CampaignDetail() {
                     <tbody>
                         <tr>
                             <td>Auto Facebook Post Mode</td>
-                            <td>{campaign.auto_fb_post_mode}</td>
+                            <td>{campaign.auto_fb_post_mode.toString()}</td>
                         </tr>
                         <tr>
                             <td>Category</td>
@@ -67,11 +71,11 @@ export default function CampaignDetail() {
                         </tr>
                         <tr>
                             <td>Current Amount Raised</td>
-                            <td>{campaign.current_amount}</td>
+                            <td>${campaign.current_amount}</td>
                         </tr>
                         <tr>
                             <td>Goal Amount</td>
-                            <td>{campaign.goal}</td>
+                            <td>${campaign.goal}</td>
   
                         </tr>
                         <tr>
@@ -91,27 +95,27 @@ export default function CampaignDetail() {
                         </tr>
                         <tr>
                             <td>Has Beneficiary</td>
-                            <td>{campaign.has_beneficiary}</td>
+                            <td>{campaign.has_beneficiary.toString()}</td>
   
                         </tr>
                         <tr>
                             <td>Donations Paused</td>
-                            <td>T{campaign.turn_off_donations}</td>
+                            <td>{campaign.turn_off_donations.toString()}</td>
   
                         </tr>
                         <tr>
                             <td>Visible in Search</td>
-                            <td>{campaign.visible_in_search}</td>
+                            <td>{campaign.visible_in_search.toString()}</td>
   
                         </tr>
                         <tr>
                             <td>Status (active/inactive)</td>
-                            <td>{campaign.status}</td>
+                            <td>{campaign.status.toString()}</td>
   
                         </tr>
                         <tr>
                             <td>Deactivated by GoFundMe</td>
-                            <td>{campaign.deactivated}</td>
+                            <td>{campaign.deactivated.toString()}</td>
   
                         </tr>
                         <tr>
@@ -126,7 +130,7 @@ export default function CampaignDetail() {
                         </tr>
                         <tr>
                             <td>Total Social Shares</td>
-                            <td>{campaign.social_shares_total}</td>
+                            <td>{campaign.social_share_total}</td>
   
                         </tr>
                         <tr>
@@ -146,7 +150,7 @@ export default function CampaignDetail() {
                         </tr>
                         <tr>
                             <td>Is Charity</td>
-                            <td>{campaign.is_charity}</td>
+                            <td>{campaign.is_charity.toString()}</td>
   
                         </tr>
                         <tr>
@@ -154,6 +158,7 @@ export default function CampaignDetail() {
                             <td>{campaign.charity_name}</td>
   
                         </tr>
+<<<<<<< HEAD
                     </tbody> */}
       {/* </Table>
             </div>
@@ -163,3 +168,14 @@ export default function CampaignDetail() {
     </Container>
   );
 }
+=======
+                    </tbody>
+            </Table>
+            </div>
+                </Col>
+                <Col md="3"></Col>
+            </Row>
+        </Container>
+    )
+}
+>>>>>>> bd1ff913e843e861569bf466b1464c76bc94e707

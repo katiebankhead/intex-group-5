@@ -17,3 +17,11 @@ code {
 .dropshadow-white {
   text-shadow: 4px 4px 0px #ffffff;
 }
+
+.btn {
+  transition: all 0.17s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.06);
+}

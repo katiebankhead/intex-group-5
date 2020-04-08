@@ -1,49 +1,57 @@
 import React from 'react'
-import { Container, Table, Row, Col, Button } from 'react-bootstrap'
+import { Container, Table, Row, Col, Button, Spinner} from 'react-bootstrap'
 import { useParams, useHistory } from 'react-router-dom'
+import AppContext from './context'
 
 export default function CampaignDetail() {
-    // const state = React.useContext(AppContext)
+    const context = React.useContext(AppContext)
     const history = useHistory()
 
     let { campaignID } = useParams()
     console.log(campaignID)
-    // let campaign = state.campaigns.find(p => p.id === parseInt(campaignID))
+    let campaignObject = context.campaigns.find(p => p.fields.campaign_id === parseInt(campaignID))
 
-    // if (!campaign) {
-    //     return (
-    //         <h2>Error: Campaign not found.</h2>
-    //     )
-    // }
+    if (!campaignObject) {
+        return (
+            // <h2>Error: Campaign not found.</h2>
+            <Spinner animation="border" role="status">
+                <span className="sr-only">Loading...</span>
+            </Spinner>
+        )
+    }
+
+    const campaign = campaignObject.fields
+    console.log(campaign)
+    console.log(campaign.title)
 
     return (
         <Container fluid className='p-4'>
             <Row className='pb-4'>
                 <Col md='3'>
                     <Button
-                    style={{
-                        backgroundColor: "#83AC25",
-                        borderColor: "#83AC25",
-                      }}
-                    className="rounded-pill"
-                    onClick={e => {
-                        history.push('/campaigns')
-                    }}
-                >
-                    <i className="fas fa-arrow-left p-1"></i>
+                        style={{
+                            backgroundColor: "#83AC25",
+                            borderColor: "#83AC25",
+                        }}
+                        className="rounded-pill"
+                        onClick={e => {
+                            history.push('/campaigns')
+                        }}
+                    >
+                        <i className="fas fa-arrow-left p-1"></i>
                         Back to Campaigns
                 </Button>
                 </Col>
             </Row>
-            
+
 
             {/* Uncomment when axios is connected */}
 
 
-            {/* <Row className='pb-2'>
+            <Row className='pb-2'>
                 <Col md="3"></Col>
                 <Col md="6">
-                    <center><h1>{campaign.campaign_id}</h1></center>
+                    <center><h1>{campaign.title}</h1></center>
                 </Col>
                 <Col md="3"></Col>
             </Row>
@@ -61,7 +69,7 @@ export default function CampaignDetail() {
                     <tbody>
                         <tr>
                             <td>Auto Facebook Post Mode</td>
-                            <td>{campaign.auto_fb_post_mode}</td>
+                            <td>{campaign.auto_fb_post_mode.toString()}</td>
                         </tr>
                         <tr>
                             <td>Category</td>
@@ -70,11 +78,11 @@ export default function CampaignDetail() {
                         </tr>
                         <tr>
                             <td>Current Amount Raised</td>
-                            <td>{campaign.current_amount}</td>
+                            <td>${campaign.current_amount}</td>
                         </tr>
                         <tr>
                             <td>Goal Amount</td>
-                            <td>{campaign.goal}</td>
+                            <td>${campaign.goal}</td>
   
                         </tr>
                         <tr>
@@ -94,27 +102,27 @@ export default function CampaignDetail() {
                         </tr>
                         <tr>
                             <td>Has Beneficiary</td>
-                            <td>{campaign.has_beneficiary}</td>
+                            <td>{campaign.has_beneficiary.toString()}</td>
   
                         </tr>
                         <tr>
                             <td>Donations Paused</td>
-                            <td>T{campaign.turn_off_donations}</td>
+                            <td>{campaign.turn_off_donations.toString()}</td>
   
                         </tr>
                         <tr>
                             <td>Visible in Search</td>
-                            <td>{campaign.visible_in_search}</td>
+                            <td>{campaign.visible_in_search.toString()}</td>
   
                         </tr>
                         <tr>
                             <td>Status (active/inactive)</td>
-                            <td>{campaign.status}</td>
+                            <td>{campaign.status.toString()}</td>
   
                         </tr>
                         <tr>
                             <td>Deactivated by GoFundMe</td>
-                            <td>{campaign.deactivated}</td>
+                            <td>{campaign.deactivated.toString()}</td>
   
                         </tr>
                         <tr>
@@ -129,7 +137,7 @@ export default function CampaignDetail() {
                         </tr>
                         <tr>
                             <td>Total Social Shares</td>
-                            <td>{campaign.social_shares_total}</td>
+                            <td>{campaign.social_share_total}</td>
   
                         </tr>
                         <tr>
@@ -149,7 +157,7 @@ export default function CampaignDetail() {
                         </tr>
                         <tr>
                             <td>Is Charity</td>
-                            <td>{campaign.is_charity}</td>
+                            <td>{campaign.is_charity.toString()}</td>
   
                         </tr>
                         <tr>
@@ -157,12 +165,12 @@ export default function CampaignDetail() {
                             <td>{campaign.charity_name}</td>
   
                         </tr>
-                    </tbody> */}
-                {/* </Table>
+                    </tbody>
+            </Table>
             </div>
                 </Col>
                 <Col md="3"></Col>
-            </Row> */}
+            </Row>
         </Container>
     )
 }

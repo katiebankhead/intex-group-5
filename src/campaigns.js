@@ -78,9 +78,11 @@ function Campaigns(props) {
           </bs.Card>
         </bs.Col>
         <bs.Col className='d-flex'>
-          <bs.Container>
-            <CampaignCard />
-            {/* <bs.Row className='justify-content-center'>
+          <bs.Col>
+            <bs.Row>
+              <bs.Container>
+                <CampaignCard />
+                {/* <bs.Row className='justify-content-center'>
             {campaigns.map(n => {
               return (
                 <CampaignCard //TODO populate with model
@@ -95,7 +97,25 @@ function Campaigns(props) {
               );
             })}
           </bs.Row> */}
-          </bs.Container>
+              </bs.Container>
+            </bs.Row>
+            <bs.Row className='justify-content-end'>
+              <bs.Button
+                block
+                className='m-4 rounded-pill font-weight-bold'
+                style={{
+                  backgroundColor: "#FFFFFF	",
+                  borderColor: "#83AC25",
+                  borderWidth: "3pt",
+                  width: "10rem",
+                  height: "3rem",
+                  color: "#83AC25",
+                }}
+                size='md'>
+                MORE
+              </bs.Button>
+            </bs.Row>
+          </bs.Col>
         </bs.Col>
       </bs.Row>
     </bs.Container>

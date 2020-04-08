@@ -8,6 +8,8 @@ import Home from "./home";
 import FooterContainer from "./footer-container";
 import Calculator from "./calculator";
 import Campaigns from "./campaigns";
+import CampaignDetail from "./campaign-detail";
+import Training from "./training";
 
 function App() {
   return (
@@ -29,6 +31,9 @@ function App() {
               </Route>
               <Route path='/campaigns'>
                 <Campaigns />
+              </Route>
+              <Route path='/training'>
+                <Training />
               </Route>
               <Route path='/'>
                 <Home />

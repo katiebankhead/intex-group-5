@@ -1,46 +1,43 @@
-import React from 'react'
-import { Container, Table, Row, Col, Button } from 'react-bootstrap'
-import { useParams, useHistory } from 'react-router-dom'
+import React from "react";
+import { Container, Table, Row, Col, Button } from "react-bootstrap";
+import { useParams, useHistory } from "react-router-dom";
 
 export default function CampaignDetail() {
-    // const state = React.useContext(AppContext)
-    const history = useHistory()
+  // const state = React.useContext(AppContext)
+  const history = useHistory();
 
-    let { campaignID } = useParams()
-    console.log(campaignID)
-    // let campaign = state.campaigns.find(p => p.id === parseInt(campaignID))
+  let { campaignID } = useParams();
+  console.log(campaignID);
+  // let campaign = state.campaigns.find(p => p.id === parseInt(campaignID))
 
-    // if (!campaign) {
-    //     return (
-    //         <h2>Error: Campaign not found.</h2>
-    //     )
-    // }
+  // if (!campaign) {
+  //     return (
+  //         <h2>Error: Campaign not found.</h2>
+  //     )
+  // }
 
-    return (
-        <Container fluid className='p-4'>
-            <Row className='pb-4'>
-                <Col md='3'>
-                    <Button
-                    style={{
-                        backgroundColor: "#83AC25",
-                        borderColor: "#83AC25",
-                      }}
-                    className="rounded-pill"
-                    onClick={e => {
-                        history.push('/campaigns')
-                    }}
-                >
-                    <i className="fas fa-arrow-left p-1"></i>
-                        Back to Campaigns
-                </Button>
-                </Col>
-            </Row>
-            
+  return (
+    <Container fluid className='p-4'>
+      <Row className='pb-4'>
+        <Col md='3'>
+          <Button
+            style={{
+              backgroundColor: "#83AC25",
+              borderColor: "#83AC25",
+            }}
+            className='rounded-pill'
+            onClick={(e) => {
+              history.push("/campaigns");
+            }}>
+            <i className='fas fa-arrow-left p-1'></i>
+            Back to Campaigns
+          </Button>
+        </Col>
+      </Row>
 
-            {/* Uncomment when axios is connected */}
+      {/* Uncomment when axios is connected */}
 
-
-            {/* <Row className='pb-2'>
+      {/* <Row className='pb-2'>
                 <Col md="3"></Col>
                 <Col md="6">
                     <center><h1>{campaign.campaign_id}</h1></center>
@@ -158,11 +155,11 @@ export default function CampaignDetail() {
   
                         </tr>
                     </tbody> */}
-                {/* </Table>
+      {/* </Table>
             </div>
                 </Col>
                 <Col md="3"></Col>
             </Row> */}
-        </Container>
-    )
+    </Container>
+  );
 }

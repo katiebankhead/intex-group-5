@@ -20,6 +20,7 @@ function CampaignCard(props) {
             </bs.Card.Text>
             <center>
               <Link
+                to={"/campaign-details/" + props.id}
                 className='btn btn-light absolute-center m-4 rounded-pill font-weight-bold'
                 style={{
                   backgroundColor: "#83AC25",

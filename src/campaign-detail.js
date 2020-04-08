@@ -1,20 +1,19 @@
 import React from "react";
 import { Container, Table, Row, Col, Button } from "react-bootstrap";
 import { useParams, useHistory } from "react-router-dom";
+import AppContext from "./context";
 
 export default function CampaignDetail() {
-  // const state = React.useContext(AppContext)
+  const state = React.useContext(AppContext);
   const history = useHistory();
 
   let { campaignID } = useParams();
   console.log(campaignID);
-  // let campaign = state.campaigns.find(p => p.id === parseInt(campaignID))
+  let campaign = state.campaigns.find((p) => p.id === parseInt(campaignID));
 
-  // if (!campaign) {
-  //     return (
-  //         <h2>Error: Campaign not found.</h2>
-  //     )
-  // }
+  if (!campaign) {
+    return <h2>Error: Campaign not found.</h2>;
+  }
 
   return (
     <Container fluid className='p-4'>

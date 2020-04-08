@@ -1,48 +1,64 @@
 import React from "react";
-import { Container, Button } from "react-bootstrap";
-import LottieControl from "./lottie"
+import { Container } from "react-bootstrap";
+import LottieControl from "./lottie";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
-
-
   return (
     <Container className='py-10  d-flex flex-column align-items-center'>
       <LottieControl />
       <div className='d-flex'>
-        <Button
+        <Link
+          to={"./campaigns"}
           block
-          className='m-4 rounded-pill'
+          className='btn btn-light m-4 rounded-pill  align-content-center'
           style={{
             backgroundColor: "#83AC25",
-            borderColor: "#83AC25",
+            borderColor: "#FFFFFF",
+            borderWidth: "5pt",
             width: "20rem",
             height: "4rem",
+            color: "#FFFFFF",
+            fontSize: "20pt",
+            boxShadow: "3px 3px 0px #999999",
           }}
           size='lg'>
-          ANALYSTS
-        </Button>
-        <Button
+          ADMIN TOOL
+        </Link>
+        <Link
+          to={"./training"}
           block
-          className='m-4 rounded-pill'
-          style={{ 
-            backgroundColor: "#83AC25",
-            borderColor: "#83AC25", 
-            width: "20rem" }}
-          size='lg'>
-          CAMPAIGN CREATORS
-        </Button>
-        <Button
-          block
-          className='m-4 rounded-pill'
+          className='btn btn-light m-4 rounded-pill  align-content-center font-weight-bold'
           style={{
-            backgroundColor: "#83AC25",
+            backgroundColor: "#FFFFFF	",
             borderColor: "#83AC25",
+            borderWidth: "5pt",
             width: "20rem",
             height: "4rem",
+            color: "#83AC25",
+            fontSize: "20pt",
+            boxShadow: "3px 3px 0px #999999",
           }}
           size='lg'>
           TRAINING
-        </Button>
+        </Link>
+        <Link
+          to={"./calculator"}
+          block
+          className='btn btn-light m-4 rounded-pill  align-content-center'
+          style={{
+            backgroundColor: "#83AC25",
+            borderColor: "#FFFFFF",
+            borderWidth: "5pt",
+            width: "20rem",
+            height: "4rem",
+            color: "#FFFFFF",
+            fontSize: "20pt",
+            boxShadow: "3px 3px 0px #999999",
+          }}
+          size='lg'>
+          USER TOOL
+        </Link>
       </div>
       <br />
     </Container>

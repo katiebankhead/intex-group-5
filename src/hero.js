@@ -4,6 +4,7 @@ import LottieControl from "./lottie";
 import { Link } from "react-router-dom";
 
 export default function Hero() {
+  //!check
   return (
     <Container className='py-10  d-flex flex-column align-items-center'>
       <LottieControl />

@@ -22,7 +22,7 @@ export default function Hero() {
         </Button>
         <Button
           block
-          className='m-4 rounded-pill font-weight-bold lato'
+          className='m-4 rounded-pill font-weight-bold'
           style={{
             backgroundColor: "#FFFFFF	",
             borderColor: "#83AC25",

@@ -29,6 +29,8 @@ function Campaigns(props) {
         <bs.Col md={3} className='d-flex'>
           <bs.Card style={{ padding: "2rem" }}>
             <bs.Form>
+              <div className='font-weight-bold'>SEARCH:</div>
+              <br />
               <bs.Form.Group controlId='exampleForm.ControlInput1'>
                 <bs.Form.Label>Email address</bs.Form.Label>
                 <bs.Form.Control type='email' placeholder='name@example.com' />

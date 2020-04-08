@@ -21,7 +21,6 @@ export default class AppProvider extends React.Component {
       </AppContext.Provider>
     );
   }
-=======
     constructor(props) {
         super(props)
         this.actions = {
@@ -35,13 +34,6 @@ export default class AppProvider extends React.Component {
   async componentDidMount() {
     const resp = await axios.get("http://localhost:8000/api/campaign/");
 
-<<<<<<< HEAD
-    this.setState({
-      campaigns: resp.data,
-    });
-  }
-}
-=======
     async componentDidMount() {
         const resp = await axios.get('http://localhost:8000/api/campaign/')
         console.log(resp.data)

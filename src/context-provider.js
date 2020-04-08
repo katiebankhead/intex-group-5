@@ -13,14 +13,6 @@ export default class AppProvider extends React.Component {
     };
   }
 
-<<<<<<< HEAD
-  render() {
-    return (
-      <AppContext.Provider value={{ ...this.state, ...this.actions }}>
-        <App />
-      </AppContext.Provider>
-    );
-  }
     constructor(props) {
         super(props)
         this.actions = {
@@ -29,7 +21,6 @@ export default class AppProvider extends React.Component {
             campaigns: [],
         }
     }
->>>>>>> bd1ff913e843e861569bf466b1464c76bc94e707
 
   async componentDidMount() {
     const resp = await axios.get("http://localhost:8000/api/campaign/");
@@ -44,4 +35,3 @@ export default class AppProvider extends React.Component {
     }
 
 }
->>>>>>> bd1ff913e843e861569bf466b1464c76bc94e707
